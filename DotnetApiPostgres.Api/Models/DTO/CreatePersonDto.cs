@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DotnetApiPostgres.Api.Models.DTO;
 
-public sealed class CreatePersonDTO
+public class CreatePersonDTO
 {
     [Required]
     public required string Name { get; set; }

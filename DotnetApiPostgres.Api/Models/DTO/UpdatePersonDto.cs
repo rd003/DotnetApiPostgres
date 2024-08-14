@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DotnetApiPostgres.Api.Models.DTO;
 
-public sealed class UpdatePersonDTO
+public class UpdatePersonDTO
 {
     public int Id { get; set; }
     [Required]
