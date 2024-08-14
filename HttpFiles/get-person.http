@@ -1,0 +1,2 @@
+# Get a specific person
+GET https://localhost:7294/api/people/1 HTTP/1.1

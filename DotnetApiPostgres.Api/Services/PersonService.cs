@@ -37,7 +37,7 @@ public sealed class PersonService : IPersonService
 
     public async Task<GetPersonDto?> FindPersonByIdAsync(int id)
     {
-        Person? person = await _context.People.Where(x => x.Id == id).FirstOrDefaultAsync();
+        Person? person = await _context.People.Where(x => x.Id == id).AsNoTracking().FirstOrDefaultAsync();
         if (person == null)
         {
             return null;

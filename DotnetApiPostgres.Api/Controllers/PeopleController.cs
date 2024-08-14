@@ -74,6 +74,7 @@ public class PeopleController : ControllerBase
         }
     }
 
+    [HttpGet]
     public async Task<IActionResult> GetPeopleAsync()
     {
         try

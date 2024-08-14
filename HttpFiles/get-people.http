@@ -1,0 +1,2 @@
+# Get People
+GET https://localhost:7294/api/people HTTP/1.1

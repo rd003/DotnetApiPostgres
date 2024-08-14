@@ -1,0 +1,7 @@
+Put https://localhost:7294/api/people/4 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id":4,
+  "name": "John 2"
+}
