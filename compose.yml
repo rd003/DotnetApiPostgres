@@ -1,0 +1,13 @@
+services:
+  web_api:
+    container_name: perons_api_app
+    build: .
+    ports:
+      - 8080:8080
+  db:
+    image: postgres
+    container_name: postgres_db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: Ravindra@123
