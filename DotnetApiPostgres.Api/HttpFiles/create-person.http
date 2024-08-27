@@ -2,5 +2,5 @@ POST https://localhost:7294/api/people/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Jane Doe"
+  "name": "John Doe"
 }

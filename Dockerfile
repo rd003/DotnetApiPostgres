@@ -9,7 +9,7 @@ RUN dotnet restore
 # copy everything else and build app
 COPY DotnetApiPostgres.Api/. ./DotnetApiPostgres.Api/
 WORKDIR /source/DotnetApiPostgres.Api
-RUN dotnet publish -c release -o /app --no-restore
+RUN dotnet publish -c release -o /app
 
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final

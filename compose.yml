@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - 8080:8080
+    depends_on:
+      - "db"
   db:
     image: postgres
     container_name: postgres_db
@@ -11,3 +13,8 @@ services:
       - 5432:5432
     environment:
       POSTGRES_PASSWORD: Ravindra@123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
