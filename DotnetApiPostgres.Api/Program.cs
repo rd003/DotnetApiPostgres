@@ -1,4 +1,5 @@
 using DotnetApiPostgres.Api;
+using DotnetApiPostgres.Api.Extensions;
 using DotnetApiPostgres.Api.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +12,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(op => op.UseNpgsql(connectio
 
 builder.Services.AddTransient<IPersonService, PersonService>();
 
-
 var app = builder.Build();
 app.MapControllers();
 
@@ -20,6 +20,9 @@ app.MapGet("/", () =>
     return Results.Ok("Hello...");
 }
 );
+
+// seeding the database
+await app.InitializedAsync();
 
 app.Run();
 
